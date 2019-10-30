@@ -17,6 +17,8 @@ export class FacebookLoginProvider extends BaseLoginProvider {
 
   static drawUser(response: any): SocialUser {
     const user: SocialUser = new SocialUser();
+    var authObject = FB.getAuthResponse();
+    user.authToken = authObject;
     user.id = response.id;
     user.name = response.name;
     user.email = response.email;

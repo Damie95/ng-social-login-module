@@ -5,6 +5,13 @@ export class SocialUser {
   name: string;
   photoUrl: string;
   token?: string;
+  authToken: {
+      accessToken: string,
+      data_access_expiration_time: number,
+      expiresIn: number,
+      signedRequest: string,
+      userId: string
+  }; // ADDED THIS
 }
 
 export class LoginProviderClass {
